@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Name: {{product.name}}</mat-card-title>
+        <mat-card-subtitle>Description: {{product.description}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div>Price: {{product.price}}</div>
+        <div>Category: {{product.category}}</div>
+        <div>Is available: {{product.isAvailable ? 'Yes' : 'No'}}</div>
+        </mat-card-content>
+</mat-card>
+
+<button mat-flat-button color="primary" (click)="onAddToCart()" class="button" [disabled]="!product.isAvailable">Buy</button>
